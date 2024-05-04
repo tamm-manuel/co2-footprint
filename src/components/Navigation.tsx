@@ -15,7 +15,7 @@ const Navigation = () => {
         <img src="/logo192.png" alt="logo" className="w-auto h-8" />
       </Link>
 
-      <div className="grow text-center sm:text-lg h-full">
+      <div className="text-center sm:text-lg h-full">
         <h2 className="flex items-center h-full justify-center ">Co2 Footprints</h2>
       </div>
 
@@ -33,13 +33,17 @@ const Navigation = () => {
           </div>
         </button>
 
-        <ul id="link-container" className="flex justify-end rtl:sm:flex-row-reverse absolute top-full border-none shadow-accent/40 sm:shadow-none px-2 -right-0 w-full h-auto sm:h-full sm:static bg-primary flex-col sm:flex-row h-auto transition-transform translate-x-full sm:translate-x-0">
+        <ul id="link-container" className="flex justify-end rtl:sm:flex-row-reverse absolute top-full border-none shadow-accent/40 sm:shadow-none px-2 -right-0 w-full h-auto sm:h-full sm:static bg-primary flex-col sm:flex-row h-auto transition-transform translate-x-full sm:translate-x-0 text-sm md:text-base">
           <li className="flex items-center">
             <Link to="/" className="p-2 hover:text-accent transition-colors" onClick={toggleBurgerMenu}>Home</Link>
           </li>
 
           <li className="flex items-center border-t sm:border-t-0 sm:border-l border-accent/75">
             <Link to="/testpage" className="p-2 hover:text-accent transition-colors" onClick={toggleBurgerMenu}>Testpage</Link>
+          </li>
+
+          <li className="flex items-center border-t sm:border-t-0 sm:border-l border-accent/75">
+            <Link to="/what_is_co2" className="p-2 hover:text-accent transition-colors" onClick={toggleBurgerMenu}>What is Co2</Link>
           </li>
         </ul>
       </div>

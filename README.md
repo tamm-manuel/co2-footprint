@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+After cloning install the required packages running following command in root directory
+```
+npm i
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -32,3 +37,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 # Used sources
 Icon of cloud used as logo
 https://www.flaticon.com/de/kostenlose-icons/co2-wolke
+
+Icon for showing sort direction
+https://fontawesome.com/icons/caret-up?f=classic&s=solid

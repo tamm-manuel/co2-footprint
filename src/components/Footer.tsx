@@ -13,7 +13,7 @@ const Footer = () => {
         <div>
           <div>© SomeCompany</div>
           <div>
-            <Link to="/" className="hover:text-accent transition-colors">Legal Notice</Link>
+            <Link to="/legal_notice" className="hover:text-accent transition-colors">Legal Notice</Link>
           </div>
         </div>
 

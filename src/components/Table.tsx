@@ -48,21 +48,36 @@ const Table: React.FC<Props> = ({ data }) => {
     <div>
       <div className='mb-2'>Search</div>
       <div className='grid grid-cols-2 mb-5'>
-        <input type="text" placeholder='country' className='px-2 bg-secondary/20 mx-2' onChange={e => setFilterCountry(e.target.value)} />
+        <input name="filter-country" type="text" placeholder='country' className='px-2 bg-secondary/20 mx-2' onChange={e => setFilterCountry(e.target.value)} />
 
-        <input type="text" placeholder='company' className='px-2 bg-secondary/20 mx-2' onChange={e => setFilterCompany(e.target.value)} />
+        <input name="filter-company" type="text" placeholder='company' className='px-2 bg-secondary/20 mx-2' onChange={e => setFilterCompany(e.target.value)} />
       </div>
 
-      <table className='w-full'>
+      <table className='w-full text-xs sm:text-base'>
         <thead>
           <tr className='[&>th]:w-1/3'>
             <th>
               <table className='w-full'>
                 <thead>
-                  <tr className='[&>th]:w-1/3'>
-                    <th onClick={() => handleSort('country')}>Country</th>
-                    <th onClick={() => handleSort('company')}>Company</th>
-                    <th onClick={() => handleSort('emission')}>Emission (t)</th>
+                  <tr className='[&>th]:w-1/3 [&>th]:relative [&>th]:cursor-pointer'>
+                    <th onClick={() => handleSort('country')}>
+                      Country
+                      {sortConfig.key === "country" && (
+                        <img src="/caret-up-solid.png" alt="arrow" className={'w-3 absolute right-0 top-1/2 -translate-y-1/2 ' + (sortConfig.direction === "desc" ? "rotate-180" : "")} />
+                      )}
+                    </th>
+                    <th onClick={() => handleSort('company')}>
+                      Company
+                      {sortConfig.key === "company" && (
+                        <img src="/caret-up-solid.png" alt="arrow" className={'w-3 absolute right-0 top-1/2 -translate-y-1/2 ' + (sortConfig.direction === "desc" ? "rotate-180" : "")} />
+                      )}
+                    </th>
+                    <th onClick={() => handleSort('emission')}>
+                      Emission (t)
+                      {sortConfig.key === "emission" && (
+                        <img src="/caret-up-solid.png" alt="arrow" className={'w-3 absolute right-0 top-1/2 -translate-y-1/2 ' + (sortConfig.direction === "desc" ? "rotate-180" : "")} />
+                      )}
+                    </th>
                   </tr>
                 </thead>
               </table>

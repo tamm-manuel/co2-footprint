@@ -7,6 +7,8 @@ import Testpage from './pages/Testpage';
 import Home from './pages/Home';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import WhatsCo2 from './pages/WhatsCo2';
+import LegalNotice from './pages/LegaNotice';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -21,6 +23,8 @@ root.render(
           <Routes>
             <Route path="/" index element={<Home />} />
             <Route path="/testpage" element={<Testpage />} />
+            <Route path="/what_is_co2" element={<WhatsCo2 />} />
+            <Route path="/legal_notice" element={<LegalNotice />} />
           </Routes>
         </div>
         

@@ -1,6 +1,6 @@
 const Testpage = () => {
   return (
-    <div>lalaalal</div>
+    <div>Just a testpage to add to the menu</div>
   );
 };
 
